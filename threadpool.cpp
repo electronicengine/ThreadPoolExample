@@ -22,11 +22,11 @@ void ThreadPool::setWorkerSize(int Size)
 
             Workers_.emplace_back([=]()
             {
-
+                
+                std::function<void()> task;
 
                 while(1)
                 {
-                    std::function<void()> task;
 
                     {
 
